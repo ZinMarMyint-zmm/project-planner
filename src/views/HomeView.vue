@@ -1,13 +1,16 @@
 <template>
   <div class="home">
     <h1>Home</h1>
+    <FilterNav @filterValue="current=$event" :current="current"></FilterNav>
     <div v-for="project in projects" :key="project.id">
       <SingleProject :project="project" @delete="deleteItem" @complete="completeItem"></SingleProject>
     </div>
   </div>
+  {{current}}
 </template>
 
 <script>
+import FilterNav from '../components/FilterNav'
 import SingleProject from '../components/SingleProject'
 // @ is an alias to /src
 
@@ -29,10 +32,12 @@ export default {
   },
   data(){
     return{
-      projects : []
+      projects : [],
+      current: "all"
     }
   },
   components: {
+    FilterNav,
     SingleProject,
     
   },
