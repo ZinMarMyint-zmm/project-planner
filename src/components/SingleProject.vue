@@ -16,7 +16,7 @@
                     </span>
                 </router-link>
                 
-                <span class="material-icons" @click="completeProject">
+                <span class="material-icons" @click="completeProject" :class="{done:project.complete}">
                     done
                 </span>
             </div>
@@ -79,7 +79,7 @@ export default {
         border-left: 5px solid crimson;
         border-radius: 5px;
     }
-    h3{
+    .project h3{
         color: indigo;
         cursor: pointer;
     }
@@ -91,11 +91,17 @@ export default {
     span{
         margin: 10px;
     }
+    a>span{
+        color: #2c3e50;
+    }
     span:hover{
         color:#777777;
         cursor: pointer;
     }
     .complete{
         border-left-color: green;
+    }
+    .done{
+        color: green;
     }
 </style>

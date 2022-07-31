@@ -1,10 +1,10 @@
 <template>
-    <h1>Add Project</h1>
+   
   <form @submit.prevent="addProject">
         <label for="">Project Title</label>
         <input type="text" v-model="title">
         <label for="">Project Detail</label>
-        <input type="text" v-model="detail">
+        <textarea v-model="detail"></textarea>
         <button>Add Project</button>
   </form>
 </template>
