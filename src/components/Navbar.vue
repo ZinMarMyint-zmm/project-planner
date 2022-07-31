@@ -2,6 +2,7 @@
   <nav class="main-nav">
     <router-link to="/">Projects</router-link>
     <router-link :to="{name:'addProject'}">Add project</router-link>
+    
   </nav>
 </template>
 
@@ -13,6 +14,7 @@ export default {
 
 <style>
 .main-nav {
+    text-transform: uppercase;
     text-align: center;
     margin: 40px auto;
 }
@@ -20,8 +22,9 @@ export default {
     display: inline-block;
     text-decoration: none;
     margin: 0 10px;
-    color: #999;
+    color: #7a7a7a;
     font-size: 18px;
+    font-weight: bold;
 }
 a.router-link-active{
     border-bottom: 2px solid #00ce89;
